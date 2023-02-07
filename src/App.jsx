@@ -3,6 +3,7 @@
 /* eslint-disable no-confusing-arrow */ import React, { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { HomeContainer } from 'containers/indexContainers';
+import { Footer } from 'components/indexComponents';
 import {
   AppBar,
   Toolbar,
@@ -16,6 +17,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 function App() {
+  /* Setting the theme to light if there is no theme in local storage. */
   const themeLocalStorage =
     window.localStorage.getItem('SD_GITHUB_API_THEME') || 'light';
   const [colorTheme, setColorTheme] = useState(themeLocalStorage);
@@ -38,44 +40,42 @@ function App() {
   return (
     <CssBaseline>
       <ThemeProvider theme={theme}>
+        <AppBar position="static">
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <GitHubIcon fontSize="large" />
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                fontWeight: 700,
+                letterSpacing: '.2rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              GithubAPI
+            </Typography>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={() => {
+                handlerTheme();
+              }}
+            >
+              {theme?.palette?.mode === 'light' ? (
+                <DarkModeIcon />
+              ) : (
+                <LightModeIcon />
+              )}
+            </IconButton>
+          </Toolbar>
+        </AppBar>
         <main>
-          <AppBar position="static">
-            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-              <GitHubIcon fontSize="large" />
-              <Typography
-                variant="h5"
-                noWrap
-                component="a"
-                href="/"
-                sx={{
-                  fontWeight: 700,
-                  letterSpacing: '.2rem',
-                  color: 'inherit',
-                  textDecoration: 'none',
-                }}
-              >
-                GithubAPI
-              </Typography>
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-                onClick={() => {
-                  handlerTheme();
-                }}
-              >
-                {theme?.palette?.mode === 'light' ? (
-                  <DarkModeIcon />
-                ) : (
-                  <LightModeIcon />
-                )}
-              </IconButton>
-            </Toolbar>
-          </AppBar>
           <Box
             component="main"
-            maxWidth="xl"
             sx={{
               display: 'flex',
               justifyContent: 'center',
@@ -88,6 +88,7 @@ function App() {
             <HomeContainer />
           </Box>
         </main>
+        <Footer />
       </ThemeProvider>
     </CssBaseline>
   );

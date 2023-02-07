@@ -44,7 +44,6 @@ export default function LocationInformation({ userInfo }) {
         value ? (
           <Grid
             xs={12}
-            md={3}
             item
             key={`Info_${title}`}
             sx={{
@@ -57,31 +56,44 @@ export default function LocationInformation({ userInfo }) {
                 gap: 1,
               }}
             >
-              {title === 'location' ? (
-                <LocationOnIcon />
-              ) : title === 'twitter' ? (
-                <TwitterIcon />
-              ) : title === 'blog' ? (
-                <LanguageIcon />
-              ) : title === 'company' ? (
-                <BusinessIcon />
-              ) : title === 'email' ? (
-                <MailIcon />
-              ) : null}
-              <Typography
-                variant="h6"
-                color={(t) => t.palette?.text?.primary}
-                sx={{ textTransform: 'capitalize' }}
+              <Stack
+                sx={{
+                  flexDirection: 'row',
+                  gap: 1,
+                }}
               >
-                {title}
+                {title === 'location' ? (
+                  <LocationOnIcon />
+                ) : title === 'twitter' ? (
+                  <TwitterIcon />
+                ) : title === 'blog' ? (
+                  <LanguageIcon />
+                ) : title === 'company' ? (
+                  <BusinessIcon />
+                ) : title === 'email' ? (
+                  <MailIcon />
+                ) : null}
+                <Typography
+                  variant="h6"
+                  color={(t) => t.palette?.text?.primary}
+                  sx={{ textTransform: 'capitalize' }}
+                >
+                  {`${title}:`}
+                </Typography>
+              </Stack>
+              <Typography
+                variant="subtitle1"
+                color={(t) => t.palette?.primary?.main}
+                sx={{
+                  whiteSpace: 'nowrap',
+                  textOverflow: 'ellipsis',
+                  overflow: 'hidden',
+                  lineHeight: 2,
+                }}
+              >
+                {value}
               </Typography>
             </Stack>
-            <Typography
-              variant="subtitle1"
-              color={(t) => t.palette?.primary?.main}
-            >
-              {value}
-            </Typography>
           </Grid>
         ) : null
       )}
