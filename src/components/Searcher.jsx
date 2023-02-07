@@ -31,7 +31,6 @@ export default function Searcher(props) {
         sx={{
           position: 'relative',
           inlineSize: '100%',
-          background: (t) => t.palette.grey[800],
         }}
         value={inputUser}
         onChange={(e) => setInputUser(e.target.value)}
