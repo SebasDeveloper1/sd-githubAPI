@@ -23,9 +23,13 @@
 
 ---
 
+<div align="center">
+
 |                                                                                    <h2>💻 UI </h2>                                                                                     |                                                                             <h2> (User Interface) 🚀</h2>                                                                              |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | --- |
-| ![image1](https://firebasestorage.googleapis.com/v0/b/sd-website-f934d.appspot.com/o/projects%2FgithubAPI%2Fimage1.webp?alt=media&token=53ffbff4-d630-4bed-81c7-f580d7d655b7 'image1') | ![image2](https://firebasestorage.googleapis.com/v0/b/sd-website-f934d.appspot.com/o/projects%2FgithubAPI%2Fimage2.webp?alt=media&token=4e28cea6-f1bb-4a37-8332-5534969466fe 'image2') |     |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| ![image1](https://firebasestorage.googleapis.com/v0/b/sd-website-f934d.appspot.com/o/projects%2FgithubAPI%2Fimage1.webp?alt=media&token=53ffbff4-d630-4bed-81c7-f580d7d655b7 'image1') | ![image2](https://firebasestorage.googleapis.com/v0/b/sd-website-f934d.appspot.com/o/projects%2FgithubAPI%2Fimage2.webp?alt=media&token=4e28cea6-f1bb-4a37-8332-5534969466fe 'image2') |
+
+</div>
 
 ### 👩‍💻 Clone the repo
 
